@@ -1,0 +1,13 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# 1. Redirect www to non-www cleanly (Forces HTTPS at the same time)
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# 2. Force HTTP to HTTPS redirection (if not already handled)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# 3. Handle custom 404 Page Not Found error
+ErrorDocument 404 /404.html

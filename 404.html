@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found — Qprompter</title>
+<meta name="description" content="Oops! The page you are looking for does not exist on Qprompter. Return to safety.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/qprompter-touch-icon.png">
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://qprompter.com/404.html">
+<meta property="og:title" content="Page Not Found — Qprompter">
+<meta property="og:description" content="Oops! The page you are looking for does not exist on Qprompter.">
+<meta property="og:image" content="https://qprompter.com/og-image.png">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://qprompter.com/404.html">
+<meta name="twitter:title" content="Page Not Found — Qprompter">
+<meta name="twitter:description" content="Oops! The page you are looking for does not exist on Qprompter.">
+<meta name="twitter:image" content="https://qprompter.com/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<style>
+  .error-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: var(--space-lg) 0;
+    background: var(--bg-base);
+  }
+  .error-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .error-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle 600px at 50% 50%, var(--accent-glow) 0%, transparent 80%);
+  }
+  .error-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 480px;
+    padding: var(--space-lg);
+    background: rgba(19, 19, 22, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+  }
+  .error-code {
+    font-size: 5.5rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    background: linear-gradient(135deg, var(--accent) 0%, #B8C0F0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--space-md);
+  }
+  .error-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    color: var(--text-primary);
+  }
+  .error-text {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-lg);
+    line-height: 1.6;
+  }
+  .error-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+  }
+  .logo-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: var(--space-lg);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+  }
+  .logo-top img {
+    border-radius: 6px;
+    object-fit: contain;
+  }
+</style>
+</head>
+<body>
+
+<section class="error-section">
+  <div class="error-bg"></div>
+  <div class="error-content">
+    <a href="index.html" class="logo-top">
+      <img src="assets/logo_white.png" alt="Qprompter Logo" width="28" height="28">
+      <span>Qprompter</span>
+    </a>
+    <div class="error-code">404</div>
+    <h1 class="error-title">Prompt execution failed.</h1>
+    <p class="error-text">We queued this page, but it seems to have been deleted or moved. The destination could not be resolved.</p>
+    <div class="error-actions">
+      <a href="index.html" class="btn btn-primary">
+        <i data-lucide="home" style="width:16px;height:16px;"></i>
+        Return to Safety
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Initialize lucide icons
+  lucide.createIcons();
+</script>
+</body>
+</html>

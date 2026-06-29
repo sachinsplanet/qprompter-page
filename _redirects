@@ -1,0 +1,6 @@
+# Redirect HTTP and HTTPS www to non-www cleanly
+http://www.qprompter.com/* https://qprompter.com/:splat 301!
+https://www.qprompter.com/* https://qprompter.com/:splat 301!
+
+# Custom 404 error page routing for SPA and static files
+/*  /404.html  404
