@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -3287,6 +3287,20 @@ body {
 @media (prefers-reduced-motion: reduce){
   #constellation{display:none;}
   .tilt-card{transition:none !important;transform:none !important;}
+}
+</style>
+<style id="injected-tailwind-fixes">
+/* Critical missing tailwind classes for the mobile menu */
+.translate-x-full { 
+  --tw-translate-x: 100%; 
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important; 
+}
+.-translate-x-full { 
+  --tw-translate-x: -100%; 
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important; 
+}
+@media (min-width: 768px) {
+  .md\:hidden { display: none !important; }
 }
 </style>
 </head>
